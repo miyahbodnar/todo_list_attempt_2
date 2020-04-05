@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
    redirect_to @list
   end
 
+
   def destroy
    @item = @list.items.find(params[:id])
    if @item.destroy
@@ -34,4 +35,4 @@ end
   def item_params
    params[:item].permit(:content)
   end
-  end
+end
